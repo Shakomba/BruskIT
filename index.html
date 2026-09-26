@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ckb" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brusk IT</title>
+  <meta name="description" content="Brusk IT — بەم زووانە">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --ink: #f5f5f4;
+      --muted: #8a8a8e;
+      --bolt: #f8c702;
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: 24px 16px;
+      background:
+        radial-gradient(60rem 40rem at 50% 42%, rgba(248, 199, 2, 0.07), transparent 60%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "Noto Kufi Arabic", system-ui, sans-serif;
+      overflow: hidden;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(2rem, 6vw, 3.5rem);
+      text-align: center;
+    }
+
+    .logo {
+      width: min(560px, 82vw);
+      height: auto;
+      direction: ltr;
+      animation: rise 900ms cubic-bezier(.2, .7, .2, 1) both;
+    }
+
+    .logo .letters { fill: var(--ink); }
+
+    .logo .bolt {
+      fill: var(--bolt);
+      filter: drop-shadow(0 0 18px rgba(248, 199, 2, 0.45));
+      animation: flash 5s ease-in-out 1.2s infinite;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 7vw, 3.75rem);
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0;
+      animation: rise 900ms cubic-bezier(.2, .7, .2, 1) 200ms both;
+    }
+
+    .rule {
+      width: 64px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--bolt);
+      animation: grow 900ms cubic-bezier(.2, .7, .2, 1) 400ms both;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 20px;
+      inset-inline: 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      direction: ltr;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @keyframes grow {
+      from { opacity: 0; transform: scaleX(0); }
+      to   { opacity: 1; transform: scaleX(1); }
+    }
+
+    /* Brief lightning flicker, then rest */
+    @keyframes flash {
+      0%, 86%, 100% { opacity: 1; filter: drop-shadow(0 0 18px rgba(248, 199, 2, 0.45)); }
+      88% { opacity: 0.35; }
+      90% { opacity: 1; filter: drop-shadow(0 0 34px rgba(248, 199, 2, 0.9)); }
+      92% { opacity: 0.5; }
+      94% { opacity: 1; filter: drop-shadow(0 0 26px rgba(248, 199, 2, 0.7)); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Logo.svg, inlined so the letters can be recoloured for the dark background -->
+    <svg class="logo" viewBox="0 0 889.91 210.53" role="img" aria-label="Brusk IT">
+      <g class="letters">
+        <path d="M112.15,17.19h-16.72l-52.56,36.21L0,171.18h61.82c40.26,0,63.88-19.58,73.81-46.86,5.85-16.06,1.87-27.5-10.55-33.88l.24-.66c12.81-6.15,22.27-15.84,27.47-30.13,9.53-26.18-3.46-42.46-40.64-42.46ZM97.91,122.78c-3.84,10.56-13.18,18.7-27.26,18.7h-22l12.89-35.42h22c13.42,0,18.22,6.16,14.37,16.72ZM113.51,63.6c-3.6,9.91-12.68,16.73-26.32,16.73h-16.28l12.17-33.44h16.28c12.98,0,18.24,5.5,14.15,16.71Z"/>
+        <path d="M249.67,57l-13.93,38.28c-29.92-4.84-40,13.2-46.81,31.9l-16.01,44h-35.64l40.6-111.54h35.64l-6.17,16.94c12.48-12.54,29.13-19.58,42.33-19.58Z"/>
+        <path d="M373.45,59.64l-40.6,111.54h-35.86l3.68-10.12c-8.8,7.26-20.57,12.98-35.08,12.98-27.94,0-32.91-22-24.75-44.44l25.46-69.96h35.64l-21.94,60.28c-4.64,12.76,1.17,19.14,10.85,19.14,10.56,0,20.3-6.82,24.79-19.14l21.94-60.28h35.86Z"/>
+        <path d="M552.26,171.18l-13.82-49.06-17.86,49.06h-35.86l56.05-154h35.86l-32.27,88.66,47.4-46.2h40.04l-56.4,52.8,18.66,58.74h-41.8Z"/>
+        <path d="M760.33,17.18l-56.05,154h-37.62l56.05-154h37.62Z"/>
+        <path d="M876.94,52.82h-36.08l-43.08,118.36h-37.62l43.08-118.36h-36.08l12.97-35.64h109.78l-12.97,35.64Z"/>
+        <polygon points="88.65 5.74 36.09 41.95 49.27 5.74 88.65 5.74"/>
+      </g>
+      <path class="bolt" d="M478.52,1.99c4.92-.68,9.83-1.41,14.76-1.99-8.65,15.27-17.47,30.44-26.39,45.55-5.91,10.05-11.74,20.16-17.8,30.12-.96,1.64-1.88,3.32-2.96,4.88,17.11-2.67,34.2-5.44,51.3-8.17-7.45,9.44-15.12,18.71-22.69,28.05-7,8.67-14.08,17.27-21.04,25.98-17.58,21.47-34.99,43.08-52.67,64.48-3.76,4.54-7.39,9.18-11.22,13.66-1.69,1.97-3.27,4.03-4.97,5.99.19-.97.71-1.83,1.06-2.74,5.04-12.4,9.92-24.87,14.74-37.35,7.45-18.84,14.75-37.75,22.17-56.61-7.19,1-14.33,2.33-21.5,3.48-6.18.98-12.34,2.06-18.53,2.96,10-36.37,20.22-72.69,29.98-109.13,7.14-1.12,51-7.12,65.78-9.15Z"/>
+    </svg>
+
+    <span class="rule" aria-hidden="true"></span>
+
+    <h1>بەم زووانە</h1>
+  </main>
+
+  <footer>© <span id="y">2026</span> Brusk IT</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
